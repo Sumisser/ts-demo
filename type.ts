@@ -82,8 +82,8 @@ typeVar = [1, '2'];
  */
 
 // Person类型只能是'age'/ 'name' / 'gender'三个字符串中的一种
-type Person = 'age' | 'name' | 'gender';
-let jack: Person = 'age';
+type PersonInterface = 'age' | 'name' | 'gender';
+let jack: PersonInterface = 'age';
 
 // 表示数字类型或者值只能是'number'的类型
 type P = 'number' | number;
