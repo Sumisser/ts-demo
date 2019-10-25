@@ -84,5 +84,15 @@ let ass: AnyProps = {
 	gender: 'famale'
 };
 
-let a = ass?.name;
-console.log(a)
+// 其余属性必须是任意属性的子类型
+// interface OtherProps {
+// 	name: string; // 类型“string”的属性“name”不能赋给字符串索引类型“number”
+// 	age?: number;
+// 	[prop: string]: number;
+// }
+
+// let oth: AnyProps = {
+// 	name: 'tiny',
+// 	age: 1,
+// 	gender: 'famale'
+// };
