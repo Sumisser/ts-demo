@@ -105,6 +105,12 @@ interface SearchFunc {
   (source: string, subString: string): boolean;
 }
 
-const searchFunc: SearchFunc = (source: string, subString: string) => {
-  return false;
+// 完整写法
+// const searchFunc: SearchFunc = (source: string, subString: string): boolean => {
+//   return source.includes(subString);
+// };
+
+// 不需要再单独定义参数和返回值类型
+const searchFunc: SearchFunc = (source, subString) => {
+  return source.includes(subString);
 };
