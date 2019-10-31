@@ -97,6 +97,12 @@ let ass: AnyProps = {
 // 	gender: 'famale'
 // };
 
+interface IArr {
+  [index: number]: number;
+}
+
+let numberArr: IArr = [1, 2, 3];
+
 /**
  * @函数接口
  */
@@ -114,3 +120,46 @@ interface SearchFunc {
 const searchFunc: SearchFunc = (source, subString) => {
   return source.includes(subString);
 };
+
+/**
+ * @接口继承
+ */
+
+interface Food {
+  color: string;
+}
+
+interface Tomato extends Food {
+  radius: number;
+}
+
+// 根据Tomato创建的对象除了需要满足Tomato定义的接口形状，还需要被继承接口的属性
+const tomato: Tomato = {
+  color: 'red',
+  radius: 1
+};
+
+/**
+ * @混合类型接口
+ */
+
+interface Counter {
+  (): void;
+  count: number;
+}
+
+const getCounter = (): Counter => {
+  const c = () => {
+    c.count++;
+  };
+  c.count = 0;
+  return c;
+};
+
+const counter: Counter = getCounter();
+counter();
+console.log(counter.count); // 1
+counter();
+console.log(counter.count); // 2
+counter();
+console.log(counter.count); // 3
