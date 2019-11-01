@@ -121,12 +121,3 @@ let n: null = null;
 
 //可以赋值给任意类型
 let num: number = undefined;
-
-let obj = {
-  name: {
-    a: '1'
-  }
-};
-
-var a = obj?.name?.a
-console.log(a)

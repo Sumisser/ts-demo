@@ -47,11 +47,11 @@ console.log(len.length); // 类型确定，可以访问
 
 // 通过类型断言解决
 function getLength(something: string | number): number {
-	if ((<string>something).length) {
-		return (<string>something).length;
-	} else {
-		return something.toString().length;
-	}
+  if ((<string>something).length) {
+    return (<string>something).length;
+  } else {
+    return something.toString().length;
+  }
 }
 
 // function getLength(something: string | number): number {
